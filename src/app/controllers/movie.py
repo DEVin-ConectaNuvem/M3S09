@@ -1,19 +1,26 @@
 import json
 from flask import Blueprint
 from flask.wrappers import Response
+movies = Blueprint("movies", __name__,  url_prefix="/movies")
+from src.app import mongo_client
+from bson import json_util
 
-movies = Blueprint("movies", 
-__name__,  url_prefix="/movies")
-
-@movies.route("/get_all_movies", 
-methods = ["GET"])
+@movies.route("/get_all_movies", methods = ["GET"])
 def get_all_movies():
+  movies = mongo_client.movies.find({"type": "Movie"})
+
   return Response(
-    response=json.dumps({"records": [
-      {"name": "Senhor dos Aneis", "id": 1},
-      {"name": "A volta dos que não foram", "id": 2},
-      {"name": "Homem-Aranha 2", "id": 3}
-    ]}),
+    response=json_util.dumps({'records' : movies}),
+    status=200,
+    mimetype="application/json"
+  )
+
+@movies.route("/get_all_tv_show", methods = ["GET"])
+def get_all_tv_show():
+  movies = mongo_client.movies.find({"type": "TV Show"})
+
+  return Response(
+    response=json_util.dumps({'records' : movies}),
     status=200,
     mimetype="application/json"
   )

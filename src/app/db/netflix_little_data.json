@@ -1,0 +1,66 @@
+[
+  {
+    "type": "Movie",              
+    "title": "Norm of the North: King Sized Adventure",
+    "release_year": 2019,
+    "duration": "90 min",
+    "description": "Before planning an awesome wedding for his grandfather, a polar bear king must take back a stolen artifact from an evil archaeologist first.",
+    "cast": [
+      "Alan Marriott",
+      "Andrew Toth",
+      "Brian Dobson",
+      "Cole Howard",
+      "Jennifer Cameron",
+      "Jonathan Holmes",
+      "Lee Tockar",
+      "Lisa Durupt",
+      "Maya Kay",
+      "Michael Dobson"
+    ]
+  },
+  {
+    "type": "Movie",
+    "title": "Jandino: Whatever it Takes",
+    "release_year": 2016,
+    "duration": "94 min",
+    "description": "Jandino Asporaat riffs on the challenges of raising kids and serenades the audience with a rousing rendition of \"Sex on Fire\" in his comedy show.",
+    "cast": [
+      "Jandino Asporaat"
+    ]
+  },
+  {
+    "type": "TV Show",
+    "title": "Castle of Stars",
+    "release_year": 2015,
+    "duration": "1 Season",
+    "description": "As four couples with different lifestyles go through the ebbs and flows of joy and sorrow, each must learn how to live a good life.",
+    "cast": [
+      "Chaiyapol Pupart",
+      "Jintanutda Lummakanon",
+      "Worrawech Danuwong",
+      "Ornjira Lamwilai",
+      "Yong Armchair",
+      "Keerati Mahapreukpong",
+      "Akarat Nimitchai",
+      "Kornpassorn Duaysianklao",
+      "Nattapong Chartpong"
+    ]
+  },
+  {
+    "type": "TV Show",
+    "title": "Transformers: Robots in Disguise",
+    "release_year": 2016,
+    "duration": "1 Season",
+    "description": "When a prison ship crash unleashes hundreds of Decepticons on Earth, Bumblebee leads a new Autobot force to protect humankind.",
+    "cast": [
+      "Will Friedle",
+      "Darren Criss",
+      "Constance Zimmer",
+      "Khary Payton",
+      "Mitchell Whitfield",
+      "Stuart Allan",
+      "Ted McGinley",
+      "Peter Cullen"
+    ]
+  }
+]

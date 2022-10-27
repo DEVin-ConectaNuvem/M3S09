@@ -2,38 +2,27 @@ def create_collection_movies(mongo_client):
   movies_validator = {
     "$jsonSchema": {
         "bsonType": "object",
-        "properties": {
-            "type": {
-              "bsonType": "string",
-              "description": "Se é um filme ou uma série",
-              "enum": ["Movie", "TV Show"]
-            },
-            "title": {
-              "bsonType": "string",
-              "description": "O título",
-            },
-            "release_year": {
-              "bsonType": "int",
-              "description": "Ano de lançamento do filme"
-            },
-            "duration": {
-              "bsonType": "string",
-              "description": "Duração",
-            },
-            "description": {
-              "bsonType": "string",
-              "description": "Descrição sobre o filme",
-            },
-            "cast": {
-              "bsonType": "array",
-              "description": "Elenco do filme",
-              "items": {
-                "bsonType": "string",
-                "description": "Pessoa do filme",
-              }
-            }
-        },
-    }
+        "required": [ 
+          "_id",
+          "plot",
+          "genres",
+          "runtime",
+          "cast",
+          "num_mflix_comments",
+          "title",
+          "fullplot",
+          "countries",
+          "released",
+          "directors",
+          "rated",
+          "awards",
+          "lastupdated",
+          "year",
+          "imdb",
+          "type",
+          "tomatoes"
+        ],
+      }
   }
 
   try:

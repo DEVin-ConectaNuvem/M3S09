@@ -1,11 +1,14 @@
 from flask import Blueprint
 from flask.wrappers import Response
-movies = Blueprint("movies", __name__,  url_prefix="/movies")
 from src.app import mongo_client
 from bson import json_util
+from datetime import datetime
+
+movies = Blueprint("movies", __name__,  url_prefix="/movies")
 
 @movies.route("/get_all_movies", methods = ["GET"])
 def get_all_movies():
+
   movies = mongo_client.movies.aggregate([
     {
         '$lookup': {
@@ -22,6 +25,7 @@ def get_all_movies():
         }
     }, {
         '$project': {
+            'title': 1,
             'count': {
                 '$size': '$comments'
             }
